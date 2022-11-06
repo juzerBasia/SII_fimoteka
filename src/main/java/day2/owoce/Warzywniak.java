@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Warzywniak {
     public static void main(String[] args) {
-        Pomarancz owoc1 = new Pomarancz(1);
-        Banan owoc2 = new Banan(5);
-        Jablko owoc3 = new Jablko(1);
+        BaseOwoc owoc1 = new Pomarancz(1);
+        BaseOwoc owoc2 = new Banan(5);
+        BaseOwoc owoc3 = new Jablko(1);
 
         System.out.println(owoc1.pobierzWage());
         System.out.println(owoc2.pobierzWage());
