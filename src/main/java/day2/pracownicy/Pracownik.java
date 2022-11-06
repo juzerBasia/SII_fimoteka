@@ -5,13 +5,19 @@ public class Pracownik {
     String nazwisko;
     int wiek;
 
+    public Pracownik(String imie, String nazwisko, int wiek) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.wiek = wiek;
+    }
+
+    public Pracownik() {
+    }
+
     public String getImie() {
         return imie;
     }
 
-    public void pobierzDane() {
-        System.out.println(imie + " " + nazwisko + " ma " + wiek + " lat");
-    }
 
     public String getNazwisko() {
         return nazwisko;
@@ -31,5 +37,9 @@ public class Pracownik {
 
     public void setWiek(int wiek) {
         this.wiek = wiek;
+    }
+
+    public void pobierzDane() {
+        System.out.println(imie + " " + nazwisko + " ma " + wiek + " lat");
     }
 }
