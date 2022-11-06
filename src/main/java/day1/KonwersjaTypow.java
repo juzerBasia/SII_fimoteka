@@ -1,3 +1,5 @@
+package day1;
+
 public class KonwersjaTypow {
     public static void main(String[] args) {
 

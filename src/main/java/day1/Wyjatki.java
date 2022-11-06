@@ -1,3 +1,5 @@
+package day1;
+
 public class Wyjatki {
     public static void main(String[] args) {
         int[] tab = {5,6,7,1,2};
