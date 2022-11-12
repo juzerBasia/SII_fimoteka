@@ -4,5 +4,8 @@ public enum Genere {
     KOMEDIA,
     DRAMAT,
     MUSICAL,
-    THRILLER
+    THRILLER;
+
+    int QUIT =4;
+
 }

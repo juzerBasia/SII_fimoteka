@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 public class MovieLibrary {
-    List<Movie> movies = new ArrayList<>();
+    private List<Movie> movies = new ArrayList<>();
 
     public void addMovie(Movie movie) {
         movies.add(movie);
@@ -18,6 +18,14 @@ public class MovieLibrary {
             System.out.println(m);
     }
 
+    public List<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
+    }
+
     private List<Movie> getMovieFromDates(int startDate, int endDate) {
         List<Movie> tmp = new ArrayList<>();
 //        for (Movie m : movies) {
@@ -25,7 +33,7 @@ public class MovieLibrary {
 //                tmp.add(m);
 //        }
 //        return tmp;
-        return movies.stream().filter(item -> item.rokPremiery >=startDate && item.rokPremiery<=endDate).collect(Collectors.toList());
+        return movies.stream().filter(item -> item.getRokPremiery() >=startDate && item.getRokPremiery()<=endDate).collect(Collectors.toList());
     }
 
     public void showRandomMovie() {
@@ -34,16 +42,22 @@ public class MovieLibrary {
     }
 
     private List<Movie> getMoviesByActor(Actor actor) {
-//        List<Movie> tmp = new ArrayList<>();
-//        for (Movie m : movies) {
-//            if (m.aktorzy.contains(actor))
-//                tmp.add(m);
-//        }
-//        return tmp;
-        return movies.stream().filter(item-> item.aktorzy.contains(actor)).collect(Collectors.toList());
+        List<Movie> currentActorsList = new ArrayList<>();
+        for (Movie m : movies) {
+            var listaAktorow = m.getAktorzy();
+            for (Actor actor1 : listaAktorow) {
+                if (actor1.getImie() == actor.getImie() && actor1.getNazwisko() == actor.getNazwisko()) {
+                    currentActorsList.add(m);
+                }
+            }
+        }
+        return currentActorsList;
+       // return movies.stream().filter(item-> item.getAktorzy().contains(actor)).collect(Collectors.toList());
+
     }
     public void showMoviesByActor(Actor actor) {
         for (Movie m : getMoviesByActor(actor))
+
             System.out.println(m);
     }
 
