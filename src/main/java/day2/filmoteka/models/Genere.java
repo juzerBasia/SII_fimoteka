@@ -1,4 +1,4 @@
-package day2.filmoteka;
+package day2.filmoteka.models;
 
 public enum Genere {
     KOMEDIA,
@@ -6,6 +6,5 @@ public enum Genere {
     MUSICAL,
     THRILLER;
 
-    int QUIT =4;
 
 }

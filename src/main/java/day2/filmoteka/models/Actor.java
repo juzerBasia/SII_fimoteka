@@ -1,4 +1,4 @@
-package day2.filmoteka;
+package day2.filmoteka.models;
 
 public class Actor {
     private String imie;

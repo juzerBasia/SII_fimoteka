@@ -1,4 +1,4 @@
-package day2.filmoteka;
+package day2.filmoteka.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +71,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return tytul + "("+rokPremiery+" "+director+")";
+        return "--->"+tytul + "("+rokPremiery+" "+director+")";
     }
 }

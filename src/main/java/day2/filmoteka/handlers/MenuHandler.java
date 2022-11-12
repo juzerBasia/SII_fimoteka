@@ -2,7 +2,10 @@ package day2.filmoteka.handlers;
 
 public class MenuHandler {
     public static void printMenu() {
-        System.out.println("Welcome in Filmoteka\n");
+        System.out.println("""
+        --------------------
+        Welcome in Filmoteka
+        --------------------""");
         System.out.println("Available actions (choose one option):");
         System.out.println(""" 
                 1. display all about random movie
